@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- =============================================
+       НАЗВАНИЕ САЙТА — измените текст ниже
+       ============================================= -->
+  <title>Мото-Приключения | Внедорожные истории</title>
+
+  <meta name="description" content="Блог о приключениях на внедорожном мотоцикле. Маршруты, фотографии, истории из путешествий.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =============================================
+       НАВИГАЦИЯ (меню сайта)
+       Чтобы изменить пункты меню, отредактируйте
+       текст внутри тегов <a>
+       ============================================= -->
+  <nav class="navbar">
+    <div class="container">
+      <!-- Логотип — измените текст -->
+      <a href="#" class="logo">МОТО<span>TRAIL</span></a>
+
+      <button class="menu-toggle" aria-label="Меню" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#adventures">Приключения</a></li>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#bike">Мотоцикл</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- =============================================
+       ГЛАВНЫЙ БАННЕР
+       Чтобы изменить фоновое фото, откройте файл
+       styles.css и найдите секцию .hero — замените
+       URL картинки на свою.
+       ============================================= -->
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <!-- Заголовок — измените текст -->
+      <h1>Дорога — это <span class="accent">свобода</span></h1>
+      <!-- Подзаголовок — измените текст -->
+      <p>Исследую бездорожье на мотоцикле. Грязь, горы, реки и бесконечные просторы — здесь я делюсь своими приключениями.</p>
+      <a href="#adventures" class="btn">Смотреть приключения</a>
+    </div>
+    <a href="#adventures" class="scroll-indicator">
+      <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </header>
+
+  <!-- =============================================
+       ПРИКЛЮЧЕНИЯ
+       ===============================================
+       Чтобы ДОБАВИТЬ новое приключение, скопируйте
+       блок <article class="adventure-card"> ... </article>
+       и вставьте его ниже. Затем измените:
+         1. src="..." — ссылку на фото
+         2. Дату
+         3. Заголовок
+         4. Описание
+       ============================================= -->
+  <section class="section" id="adventures">
+    <h2 class="section-title">Мои <span class="accent">приключения</span></h2>
+    <p class="section-subtitle">Каждая поездка — это новая история</p>
+
+    <div class="adventures-grid">
+
+      <!-- === ПРИКЛЮЧЕНИЕ 1 === -->
+      <article class="adventure-card fade-in">
+        <img class="card-image"
+             src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600&q=80"
+             alt="Горный перевал">
+        <div class="card-body">
+          <div class="card-date">15 марта 2026</div>
+          <h3 class="card-title">Горный перевал: 200 км по грунтовке</h3>
+          <p class="card-text">
+            Ранним утром выехал в сторону горного перевала. Дорога быстро превратилась в каменистую тропу. Местами приходилось переезжать ручьи, но виды стоили каждого километра.
+          </p>
+          <a href="#" class="card-link">Читать далее →</a>
+        </div>
+      </article>
+
+      <!-- === ПРИКЛЮЧЕНИЕ 2 === -->
+      <article class="adventure-card fade-in">
+        <img class="card-image"
+             src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?w=600&q=80"
+             alt="Лесная тропа">
+        <div class="card-body">
+          <div class="card-date">2 февраля 2026</div>
+          <h3 class="card-title">Лесная тропа после дождя</h3>
+          <p class="card-text">
+            После трёх дней дождей лесная дорога превратилась в настоящее болото. Грязь по колено, колея по раму — но мотоцикл справился! Застрял только дважды.
+          </p>
+          <a href="#" class="card-link">Читать далее →</a>
+        </div>
+      </article>
+
+      <!-- === ПРИКЛЮЧЕНИЕ 3 === -->
+      <article class="adventure-card fade-in">
+        <img class="card-image"
+             src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=600&q=80"
+             alt="Речная переправа">
+        <div class="card-body">
+          <div class="card-date">18 января 2026</div>
+          <h3 class="card-title">Переправа через горную реку</h3>
+          <p class="card-text">
+            Нашёл маршрут через дикую долину с переправой через реку. Вода доходила до колен, течение сильное. Адреналин зашкаливал, но мы прошли!
+          </p>
+          <a href="#" class="card-link">Читать далее →</a>
+        </div>
+      </article>
+
+      <!-- =============================================
+           ЧТОБЫ ДОБАВИТЬ ЕЩЁ ОДНО ПРИКЛЮЧЕНИЕ:
+           Скопируйте блок ниже, раскомментируйте его
+           и заполните своими данными
+           =============================================
+
+      <article class="adventure-card fade-in">
+        <img class="card-image"
+             src="ВСТАВЬТЕ_ССЫЛКУ_НА_ФОТО"
+             alt="Описание фото">
+        <div class="card-body">
+          <div class="card-date">ДАТА</div>
+          <h3 class="card-title">ЗАГОЛОВОК ПРИКЛЮЧЕНИЯ</h3>
+          <p class="card-text">
+            ОПИСАНИЕ ПРИКЛЮЧЕНИЯ — напишите здесь что произошло,
+            где были, что видели.
+          </p>
+          <a href="#" class="card-link">Читать далее →</a>
+        </div>
+      </article>
+
+      -->
+
+    </div>
+  </section>
+
+  <!-- =============================================
+       О СЕБЕ
+       Измените фото, имя и описание
+       ============================================= -->
+  <section class="section" id="about">
+    <div class="about-section fade-in">
+      <!-- Фото — замените ссылку на своё фото -->
+      <img class="about-photo"
+           src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80"
+           alt="Моё фото">
+      <div class="about-text">
+        <h2>Обо <span class="accent">мне</span></h2>
+        <!-- Измените текст ниже на свой -->
+        <p>
+          Привет! Меня зовут Николай. Я увлекаюсь внедорожными мотоциклами и люблю исследовать места, куда не доберётся обычный транспорт.
+        </p>
+        <p>
+          На этом сайте я делюсь своими маршрутами, фотографиями и историями с дороги. Каждая поездка — это маленькое приключение, и я рад, что могу рассказать о них.
+        </p>
+
+        <!-- Статистика — измените числа -->
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-number">15 000+</span>
+            <span class="stat-label">км пройдено</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">42</span>
+            <span class="stat-label">поездки</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">3</span>
+            <span class="stat-label">года опыта</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       ГАЛЕРЕЯ ФОТОГРАФИЙ
+       ===============================================
+       Чтобы добавить фото, скопируйте блок
+       <div class="gallery-item"> и вставьте свою
+       ссылку на изображение и подпись.
+       ============================================= -->
+  <section class="section" id="gallery">
+    <h2 class="section-title">Фото<span class="accent">галерея</span></h2>
+    <p class="section-subtitle">Лучшие кадры из поездок</p>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item fade-in" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600&q=80" alt="Мотоцикл на трейле">
+        <div class="gallery-overlay"><span>На горной тропе</span></div>
+      </div>
+
+      <div class="gallery-item fade-in" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600&q=80" alt="Закат в горах">
+        <div class="gallery-overlay"><span>Закат в горах</span></div>
+      </div>
+
+      <div class="gallery-item fade-in" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=600&q=80" alt="Переправа">
+        <div class="gallery-overlay"><span>Речная переправа</span></div>
+      </div>
+
+      <div class="gallery-item fade-in" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?w=600&q=80" alt="Лесная дорога">
+        <div class="gallery-overlay"><span>После дождя в лесу</span></div>
+      </div>
+
+      <div class="gallery-item fade-in" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=80" alt="Лагерь">
+        <div class="gallery-overlay"><span>Ночёвка у реки</span></div>
+      </div>
+
+      <div class="gallery-item fade-in" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" alt="Дорога">
+        <div class="gallery-overlay"><span>Дорога в никуда</span></div>
+      </div>
+
+      <!-- Добавьте ещё фото, скопировав блок выше -->
+
+    </div>
+  </section>
+
+  <!-- =============================================
+       МОЙ МОТОЦИКЛ
+       Измените название, характеристики
+       ============================================= -->
+  <section class="section" id="bike">
+    <div class="bike-section fade-in">
+      <h2>Мой <span class="accent">мотоцикл</span></h2>
+      <p class="bike-subtitle">Верный напарник во всех поездках</p>
+
+      <!-- Измените название и характеристики мотоцикла -->
+      <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--color-accent);">Honda CRF300L</h3>
+
+      <div class="bike-specs">
+        <div class="spec-item">
+          <span class="spec-value">286 см³</span>
+          <span class="spec-name">Объём</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-value">27 л.с.</span>
+          <span class="spec-name">Мощность</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-value">144 кг</span>
+          <span class="spec-name">Вес</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-value">7.8 л</span>
+          <span class="spec-name">Бак</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       ПОДВАЛ САЙТА
+       Измените ссылки на свои соцсети
+       ============================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="social-links">
+        <!-- YouTube — замените # на вашу ссылку -->
+        <a href="#" title="YouTube" aria-label="YouTube">
+          <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <!-- Telegram — замените # на вашу ссылку -->
+        <a href="#" title="Telegram" aria-label="Telegram">
+          <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        </a>
+        <!-- Instagram — замените # на вашу ссылку -->
+        <a href="#" title="Instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 1 1-2.882 0 1.441 1.441 0 0 1 2.882 0z"/></svg>
+        </a>
+        <!-- VK — замените # на вашу ссылку -->
+        <a href="#" title="ВКонтакте" aria-label="ВКонтакте">
+          <svg viewBox="0 0 24 24"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/></svg>
+        </a>
+      </div>
+      <p class="footer-text">© 2026 МотоTrail — Все права защищены</p>
+    </div>
+  </footer>
+
+  <!-- =============================================
+       ЛАЙТБОКС (просмотр фото на весь экран)
+       ============================================= -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Закрыть">&times;</button>
+    <img src="" alt="Фото" id="lightboxImg">
+  </div>
+
+  <!-- =============================================
+       СКРИПТЫ — НЕ НУЖНО МЕНЯТЬ
+       ============================================= -->
+  <script>
+    // Мобильное меню
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+
+    // Закрыть меню при клике на ссылку
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('navLinks').classList.remove('active');
+      });
+    });
+
+    // Лайтбокс (просмотр фото)
+    function openLightbox(el) {
+      var img = el.querySelector('img');
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightboxImg');
+      lightboxImg.src = img.src.replace('w=600', 'w=1200');
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    // Закрыть лайтбокс по Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Анимация появления элементов при скролле
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
